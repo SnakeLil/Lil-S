@@ -1,14 +1,30 @@
-import React, { useContext, useReducer } from 'react';
+import React, { useContext, useReducer, useState } from 'react';
 import './App.scss'
 import Button, { ButtonSize, ButtonType } from './components/button/Button';
+import Alert, {AlertType,AlertSize} from './components/alert/Alert';
 
 function App() {
-
+  const [visible, setVisible] = useState(true)
 
   return (
     <div className="App">
+      <Alert setVisible={setVisible} 
+      autoclose={true}
+      // size={AlertSize.small}
+      title={`人家可爱吗?(0'◡'0)`}
+      type={AlertType.lovely}
+      desc='人家可爱吗?人家可爱吗?人家可爱吗?'
+      visible={visible} 
+      onClose={(e:any)=>{console.log(e)}}
+      closable={true}
+      // center={true}
+      // middle= {true}
+      />
       <div className="huge">
-        <Button size={ButtonSize.huge}   onClick={(e)=>{console.log(e)}}>点击</Button>
+        <Button size={ButtonSize.huge}   onClick={(e)=>{
+          setVisible(true)
+          console.log('点击按钮')
+          }}>点击</Button>
         <Button size={ButtonSize.huge} btnType={ButtonType.default}>click</Button>
         <Button size={ButtonSize.huge} btnType={ButtonType.black}>click</Button>
         <Button size={ButtonSize.huge} btnType={ButtonType.cool}>click</Button>

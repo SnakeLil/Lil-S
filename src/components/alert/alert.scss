@@ -1,0 +1,119 @@
+.alert {
+    z-index: 999;
+    position: fixed;
+    padding: 20px;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin: auto;
+    width: 600px;
+    min-height: 140px;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 1px 1px 2px $lightgray;
+    border: 1px solid rgb(255, 255, 255, .2);
+    transition: all 0.2s ease-in-out;
+    animation: fadeIn 0.2s ease-in-out ;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            top: 40px;
+        }
+        to {
+            opacity: 1;
+        }
+
+    }
+
+    .desc {
+        font-weight: 400;
+    }
+}
+
+.alert-small {
+    width: 400px;
+    min-height: 100px;
+}
+.alert-large {
+    width: 800px;
+    min-height: 180px;
+}
+.alert-closable {
+    .lil-close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+        cursor: pointer;
+        color: $black;
+        font-size: 20px;
+        font-weight: 600;
+        &:hover {
+            color: $lightgray;
+        }
+    }
+}
+.alert-center {
+    justify-content: center;
+    
+}
+.alert-middle {
+    align-items: center;
+}
+.alert-success {
+    background-color: $lightblue;
+    color: white;
+    .lil-close {
+        color: white;
+    }
+}
+.alert-error {
+    background-color: $lightred;
+    color: white;
+    .lil-close {
+        color: white;
+    }
+}
+.alert-info {
+    background-color: $lightgray;
+    color: $black;
+}
+.alert-warning {
+    background-color: $warning;
+    color: $black;
+}
+.alert-cool {
+    background-color: white;
+    border: 1px solid $black;
+    color: $black;
+}
+.alert-black {
+    background-color: $black;
+    color: white;
+    .lil-close {
+        color: white;
+    }
+}
+.alert-purple {
+    background-color: $purple;
+    color: $white;
+    .lil-close {
+        color: lighten($pink,20%);
+    }
+}
+.alert-green {
+    background-color: $lightgreen;
+    color: $white;
+    .lil-close {
+        color: $qing;
+    }
+}
+.alert-lovely {
+    background-color: lighten($pink,20%);
+    color: white;
+    .lil-close {
+        color: white;
+    }
+}
