@@ -11,9 +11,8 @@
 | className | string |  |
 | children | React.ReactNode |  |
 | btnType
- | ButtonType  | enum{
-  default = 'default',
-  primary = 'primary',
+ | ButtonType  |  default = 'default',
+ primary = 'primary',
   cool = 'cool',
   danger = 'danger',
   text = 'text',
@@ -23,14 +22,10 @@
   warm = 'warm',
   purple = 'purple',
   green = 'green',
-
-}
 取其一 |
-| size | ButtonSize | enum{
-small = 'small',
+| size | ButtonSize | small = 'small',
 large = 'large',
 huge = 'huge'
-}
 取其一 |
 | disabled | boolean |  |
 | loading（是否加载状态） | boolean |  |
@@ -59,17 +54,15 @@ huge = 'huge'
 | setVisible( //控制显示隐藏的函数) | (value: React.SetStateAction<boolean>) => void |  |
 | title | string |  |
 | desc | string |  |
-| type | AlertType | enum AlertType {
-    success = 'success', 
-    error = 'error',
+| type | AlertType | success = 'success', 
+ error = 'error',
     info = 'info',
     warning = 'warning',
     cool = 'cool',
     black = 'black',
     purple = 'purple',
     green = 'green',
-    lovely = 'lovely'
-} |
+    lovely = ‘lovely' |
 | icon |  |  |
 | center（ //垂直方向居中） | boolean |  |
 | middle（ //水平方向居中） | boolean  |  |
