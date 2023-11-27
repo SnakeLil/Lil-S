@@ -1,0 +1,168 @@
+
+.btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: $btn-default-w;
+    min-height: $btn-default-h;
+    padding: $btn-padding-tb $btn-padding;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    background-image: none;
+    font-size: 16px;
+    font-weight: 520;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    box-shadow: 1px 1px 2px $lightgray;
+    &.disabled, &[disabled] {
+        cursor: not-allowed;
+        opacity:0.5;
+        box-shadow: none;
+        >* {
+            pointer-events:none; 
+        }
+    }
+}
+.btn-small {
+    padding: $btn-padding-tb*0.85 $btn-padding*0.85;
+    font-size: 14px;
+    font-weight: 550;
+    min-width: $btn-small-w;
+    min-height: $btn-small-h;
+}
+.btn-large {
+    padding: $btn-padding-tb*1.125 $btn-padding*1.125;
+    min-width: $btn-large-w;
+    min-height: $btn-large-h;
+}
+.btn-huge {
+    padding: $btn-padding-tb*1.225 $btn-padding*1.225;
+    min-width: $btn-huge-w;
+    min-height: $btn-huge-h;
+}
+.btn-default {
+    background-color: white;
+    border-radius: $btn-radius;
+    border: 2px solid $btn-border;
+    color: $black;
+    
+    &:hover{
+        background-color: lighten($lightgray,5%);
+        color: lighten( $black, 10%)
+    }
+}
+.btn-primary {
+    background-color: $lightblue;
+    border-radius: $btn-radius;
+    border: 2px solid rgb(231, 231, 231);
+    color: white;
+    &:hover{
+        background-color: darken($lightblue,5%);
+        color: white
+    }
+}
+.btn-danger {
+    background-color: $lightred;
+    border-radius: $btn-radius;
+    border: 2px solid rgb(231, 231, 231);
+    color: white;
+    &:hover{
+        background-color: darken($lightred,5%);
+        color: white
+    }
+}
+.btn-text {
+    background-color: inherit ;
+    border-radius: $btn-radius;
+    border: none;
+    color: $black;
+
+}
+.btn-black {
+    background-color: inherit ;
+    border-radius: $btn-radius;
+    border: 2px solid $black;
+    color: $black;
+    &:hover{
+        border: 2px solid lighten($black, 15%);
+        color:lighten($black, 15%)
+    }
+}
+.btn-warm {
+    background-color: $warning;
+    border-radius: $btn-radius;
+    border: 2px solid rgb(231, 231, 231,.5);
+    color: white;
+    &:hover{
+        background-color: darken($warning,8%);
+        color: white
+    }
+}
+.btn-lovely {
+    background-color: $pink;
+    border-radius: $btn-radius;
+    border: 1px solid rgb(231, 231, 231,.6);
+    color: white;
+    &:hover{
+        background-color: darken($warning,5%);
+        border: 1px solid rgb(231, 231, 231,.6);
+        color: white;
+        &::after {
+            color:  $lightred;
+        }
+    }
+    &::after {
+        content: " ❤";
+        color:  $lightblue;
+    }
+}
+.btn-cool {
+    background-color: $black;
+    border-radius: $btn-radius;
+    border: 1px solid rgb(231, 231, 231);
+    color: white;
+    &:hover{
+        background-color: white;
+        border: 1px solid rgb(231, 231, 231);
+        color: $black
+    }
+}
+.btn-purple {
+    background-color: $purple;
+    border-radius: $btn-radius;
+    border: 1px solid rgb(231, 231, 231);
+    color: white;
+    &:hover{
+        background-color: lighten($purple,10%);
+        border: 1px solid rgb(231, 231, 231);
+        color: white;
+    }
+}
+.btn-green {
+    background-color: $green;
+    border-radius: $btn-radius;
+    border: 1px solid rgb(231, 231, 231);
+    color: white;
+    &:hover{
+        background-color: lighten($green,10%);
+        border: 1px solid rgb(231, 231, 231);
+        color: $white
+    }
+}
+.btn-disabled {
+    opacity:0.5;
+    cursor: not-allowed;
+
+}
+
+.btn-link {
+    background-color: inherit ;
+    border-radius: $btn-radius;
+    border: none;
+    color: $lightblue;
+    text-decoration:underline;
+    &:hover{
+        color: $blue
+    }
+}
