@@ -18,6 +18,7 @@ export enum AlertType {
 }
 export interface MenuProps {
     className?: string 
+    children?: React.ReactNode
     size?: AlertSize  //大小（默认/large/small）
     title?: string  //标题
     desc?: string //描述文本
@@ -34,6 +35,7 @@ export interface MenuProps {
 export default function Alert(props: MenuProps) {
     const {
         className,
+        children,
         size,
         title = props.title ? props.title : '',
         desc = props.desc ? props.desc : '',
@@ -75,6 +77,7 @@ export default function Alert(props: MenuProps) {
                     className={classes}>
                     <span>{title}</span>
                     {desc ? <p className='desc'>{desc}</p> : null}
+                    {children}
                     {closable ?
                         <span className='lil-close' onClick={(e) => {
                             onClose(ref.current)
@@ -86,6 +89,7 @@ export default function Alert(props: MenuProps) {
                     }
                 </div>
                 : null}
+                
         </>
     )
 }
